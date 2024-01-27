@@ -2,8 +2,10 @@ package com.example.rickandmorty.components.cards
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,18 +18,21 @@ import coil.compose.AsyncImage
 
 @Composable
 fun CharacterCard(
-    id: Int,
+    id: String,
     name: String,
     status: String,
     species: String,
     gender: String,
     image: String,
+    onClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier
             .padding(4.dp)
             .border(border = BorderStroke(1.dp, Color.DarkGray))
+            .fillMaxWidth()
+            .clickable { onClick.invoke(id) }
     ) {
         Row(
             modifier = modifier

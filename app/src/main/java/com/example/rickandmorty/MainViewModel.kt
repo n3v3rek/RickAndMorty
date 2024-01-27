@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.rickandmorty.repository.UiState
-import com.example.rickandmorty.repository.RickAndMortyData
+import com.example.rickandmorty.repository.dto.RickAndMortyData
 import com.example.rickandmorty.repository.RickAndMortyRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
